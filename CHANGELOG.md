@@ -2,6 +2,13 @@
 
 
 
+## v0.0.2 (2026-04-28)
+
+### Fix
+
+* fix: consolidate github workflow release into one action ([`0b0b04d`](https://github.com/noahfranz13/infer_filter_info/commit/0b0b04da34f2f49851ca97a841685bc47b2f1947))
+
+
 ## v0.0.1 (2026-04-28)
 
 ### Fix
