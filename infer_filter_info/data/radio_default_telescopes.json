@@ -1,5 +1,5 @@
 {
-    "vla.4":["VLA", "4"]
+    "vla.4":["VLA", "4"],
     "P":["VLA", "P"],
     "L":["VLA", "L"],
     "S":["VLA", "S"],
@@ -11,7 +11,7 @@
     "Q":["VLA", "Q"],
     "HF":["LOFAR", "1"],
     "VHF":["LOFAR", "3"],
-    "UHF":["MeerKAT", "UHF"]
+    "UHF":["MeerKAT", "UHF"],
     "1":["ALMA", "1"],
     "2":["ALMA", "2"],
     "3":["ALMA", "3"],
@@ -78,7 +78,7 @@
     "2500":["GBT", "2500"],
     "UWBR":["GBT", "UWBR"],
     "KFPA":["GBT", "KFPA"],
-    "MUSTANG-2":["GBT", "MUSTANG-2"]
+    "MUSTANG-2":["GBT", "MUSTANG-2"],
     "gbt.L":["GBT", "L"],
     "gbt.S":["GBT", "S"],
     "gbt.C":["GBT", "C"],

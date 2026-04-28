@@ -3,25 +3,25 @@ The main user facing code of this package with the function to infer the filter 
 """
 
 from .filter_mappings import (
-    FilterMapping,
-    UvoirFilterMapping,
-    RadioFilterMapping,
-    XrayFilterMapping
+    Filter,
+    UvoirFilter,
+    RadioFilter,
+    XrayFilter
 )
 from .exceptions import InvalidObsTypeError
 
 import numpy as np
 from astropy import units as u
-from astroquery.svo_fps import SvoFps
 
 def infer_filter_info(
         filter_name:str,
         telescope:str=None,
         instrument:str=None,
         obs_type:str="uvoir",
-        uvoir_defaults:UvoirFilterMapping=None,
-        radio_defaults:RadioFilterMapping=None,
-        xray_defaults:XrayFilterMapping=None
+        uvoir_defaults:UvoirFilter=None,
+        radio_defaults:RadioFilter=None,
+        xray_defaults:XrayFilter=None,
+        out_wave_unit:u.Unit = u.AA
 ) -> (u.Quantity,np.ndarray):
     """
     Infer information about an astronomical photometric filter based on the filter name,
@@ -46,25 +46,33 @@ def infer_filter_info(
         xray_defaults (XrayFilterMapping): The class with the default mappings for
                                              UV/Optical/IR. Default is the default
                                              mappings.
-
+        out_wave_unit (astropy.units.Unit): An astropy wavelength or frequency unit 
     Returns:
         A tuple of a float with the effective wavelength and the transmission curve as
         a 2 dimensional numpy array (first column is wavelength, second is
         transmission).
     """
-    if uvoir_defaults is None:
-        uvoir_defaults = UvoirFilterMappings()
-    if radio_defaults is None:
-        radio_defaults = RadioFilterMapping()
-    if xray_defaults is None:
-        xray_defaults = XrayFilterMapping()
-        
+            
     if obs_type == "uvoir":
-        return _infer_uvoir(filter_name, telescope, instrument, uvoir_defaults)
+        if uvoir_defaults is None:
+            uvoir_defaults = UvoirFilter(
+                filter_name,
+                telescope=telescope,
+                instrument=instrument,
+                out_wave_unit=out_wave_unit
+            )
+        return uvoir_defaults.wave_eff, uvoir_defaults.sens
     elif obs_type == "radio":
-        return _infer_radio(filter_name, telescope, instrument, radio_defaults)
+        if radio_defaults is None:
+            radio_defaults = RadioFilter(
+                filter_name,
+                telescope=telescope,
+                out_wave_unit=out_wave_unit
+            )
+        return radio_defaults.wave_eff, radio_defaults.sens 
     elif obs_type == "xray":
-        return _infer_xray(filter_name, telescope, instrument, xray_defaults)
+        raise NotImplementedError()
+        #return _infer_xray(filter_name, telescope, instrument, xray_defaults)
     else:
         raise InvalidObsTypeError()
 
