@@ -31,6 +31,15 @@ dependencies = [
 "astroquery"
 ]
 
+[project.optional-dependencies]
+docs = [
+    "sphinx",
+    "furo",
+    "nbsphinx",
+    "ipykernel",
+    "pandoc"
+]
+
 [project.urls]
 Home = "https://github.com/noahfranz13/infer_filter_info"
 
