@@ -163,7 +163,7 @@ class UvoirFilter(Filter):
         try:
             return self._TELESCOPE_MAP[self.instrument][self.filter_name], self.filter_name
         except KeyError as exc:
-            raise MissingDefaultError(f"Missing default telescope for {instrument} {filter_name}! Please either provide telescope name or append to  RADIO_TELESCOPE_DEFAULTS variable!") from exc
+            raise MissingDefaultError(f"Missing default telescope for {self.instrument} {self.filter_name}! Please either provide telescope name or append to  RADIO_TELESCOPE_DEFAULTS variable!") from exc
 
     def infer_telescope_instrument(self):
         """
@@ -172,7 +172,7 @@ class UvoirFilter(Filter):
         try:
             return self.FILTER_DEFAULTS[self.filter_name]
         except KeyError as exc:
-            raise MissingDefaultError(f"Missing default telescope for {filter_name}! Please either provide telescope name, instrument name or append to  FILTER_DEFAULTS variable!") from exc
+            raise MissingDefaultError(f"Missing default telescope for {self.filter_name}! Please either provide telescope name, instrument name or append to  FILTER_DEFAULTS variable!") from exc
 
     def get_central_wave(self):
         wav, T = self.get_sens()
