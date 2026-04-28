@@ -1,0 +1,36 @@
+[build-system]
+requires = ['setuptools>=64']
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "infer_filter_info"
+authors = [{name = "Noah Franz", email = "nfranz@arizona.edu"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+dynamic = ["version"]
+
+requires-python = ">=3.9"
+
+classifiers = [
+  "License :: OSI Approved :: BSD License",
+  "Topic :: Scientific/Engineering",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Development Status :: 2 - Pre-Alpha"
+]
+
+dependencies = [
+  "astroquery"
+]
+
+[project.urls]
+Home = "https://github.com/noahfranz13/infer_filter_info"
+
+[tool.setuptools.dynamic]
+version = {attr = 'infer_filter_info._version.__version__'}
