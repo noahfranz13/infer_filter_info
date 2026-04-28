@@ -39,6 +39,14 @@ docs = [
     "ipykernel",
     "pandoc"
 ]
+dev = [
+    "python-semantic-release",
+    "build"
+]
+
+[tool.semantic_release]
+version_variables = ["infer_filter_info/_version.py:__version__"]
+build_command = "pip install build && python -m build"
 
 [project.urls]
 Home = "https://github.com/noahfranz13/infer_filter_info"
