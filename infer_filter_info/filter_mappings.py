@@ -14,24 +14,52 @@ DATADIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),"data")
 class Filter:
     def __init__(self, filter_name:str, telescope:str=None, instrument:str=None, out_wave_unit:u.Unit=u.AA):
         self.filter_name = filter_name
-        self.telescope = telescope
-        self.instrument = instrument
+        self._telescope = telescope
+        self._instrument = instrument
         self.out_wave_unit = out_wave_unit
         
         if self.telescope is None and self.instrument is None:
-            self.telescope, self.instrument, self.filter_name = self.infer_telescope_instrument()
+            self._telescope, self._instrument, self.filter_name = self.infer_telescope_instrument()
         
         if self.telescope is None:
-            self.telescope, self.filter_name = self.infer_telescope()
+            self._telescope, self.filter_name = self.infer_telescope()
 
         if self.instrument is None:
-            self.instrument, self.filter_name = self.infer_instrument()
+            self._instrument, self.filter_name = self.infer_instrument()
             
-        self._svo_filter_id = f"{self.telescope}/{self.instrument}.{self.filter_name}"
+        self._svo_filter_id = f"{self._telescope}/{self._instrument}.{self.filter_name}"
             
         self.wave_eff = self.get_central_wave()
         self.sens = self.get_sens()
 
+    @property
+    def svo_filter_id(self):
+        return self._svo_filter_id
+
+    @svo_filter_id.setter
+    def svo_filter_id(self, value):
+        self._svo_filter_id = value
+        self.sens = self.get_sens()
+        self.wave_eff = self.get_central_wave()
+        
+    @property
+    def telescope(self):
+        return self._telescope
+
+    @telescope.setter
+    def telescope(self, val):
+        self._telescope = val
+        self.svo_filter_id = f"{self._telescope}/{self._instrument}.{self.filter_name}"
+
+    @property
+    def instrument(self):
+        return self._instrument
+
+    @instrument.setter
+    def instrument(self, val):
+        self._instrument = val
+        self.svo_filter_id = f"{self._telescope}/{self._instrument}.{self.filter_name}"
+        
     def infer_instrument(self):
         return None, self.filter_name
 
