@@ -1,0 +1,86 @@
+import pytest
+import numpy as np
+from astropy import units as u
+from unittest.mock import patch, MagicMock
+from infer_filter_info.filter_mappings import RadioFilter, UvoirFilter, Filter
+from infer_filter_info.exceptions import MissingDefaultError
+
+def test_filter_base_class():
+    # Filter is a base class with some NotImplementedError methods
+    # But we can still test the __init__ logic if we provide telescope/instrument
+    with patch.object(Filter, 'get_central_wave', return_value=5000*u.AA):
+        with patch.object(Filter, 'get_sens', return_value=np.array([[5000],[1]])):
+            f = Filter("r", telescope="Palomar", instrument="ZTF")
+            assert f.filter_name == "r"
+            assert f.telescope == "Palomar"
+            assert f.instrument == "ZTF"
+            assert f.svo_filter_id == "Palomar/ZTF.r"
+
+def test_radio_filter():
+    rf = RadioFilter("L", telescope="VLA")
+    assert rf.filter_name == "L"
+    assert rf.telescope == "VLA"
+    # L band for VLA is 1-2 GHz. 
+    # (1+2)/2 = 1.5 GHz. 
+    # 1.5 GHz to AA: c / 1.5e9 Hz = 2.99792458e8 / 1.5e9 m = 0.19986 m = 1.9986e9 AA
+    expected_wave = (1.5 * u.GHz).to(u.AA, equivalencies=u.spectral())
+    assert rf.wave_eff.unit == u.AA
+    assert np.isclose(rf.wave_eff.value, expected_wave.value)
+    
+    sens = rf.get_sens(n=10)
+    assert sens.shape == (2, 10)
+    assert np.all(sens[1] == 1.0) # Uniform transmission
+
+def test_radio_filter_infer_telescope():
+    rf = RadioFilter("L") # Should infer VLA from radio_default_telescopes.json
+    assert rf.telescope == "VLA"
+    assert rf.filter_name == "L"
+
+def test_radio_filter_missing_default():
+    with pytest.raises(MissingDefaultError):
+        RadioFilter("non_existent_band")
+
+@patch("infer_filter_info.filter_mappings.SvoFps.get_transmission_data")
+def test_uvoir_filter(mock_get_transmission_data):
+    # Mock return value for SvoFps.get_transmission_data
+    # It returns an astropy Table-like object
+    mock_table = MagicMock()
+    mock_table.__getitem__.side_effect = lambda key: {
+        "Wavelength": MagicMock(data=MagicMock(data=np.array([4000, 5000, 6000])), unit=u.AA),
+        "Transmission": MagicMock(data=MagicMock(data=np.array([0, 1, 0])))
+    }[key]
+    mock_get_transmission_data.return_value = mock_table
+    
+    uf = UvoirFilter("r", telescope="Palomar", instrument="ZTF")
+    assert uf.filter_name == "r"
+    assert uf.telescope == "Palomar"
+    assert uf.instrument == "ZTF"
+    
+    # wave_eff is calculated using trapezoid rule
+    # wav = [4000, 5000, 6000], T = [0, 1, 0]
+    # wav*T = [0, 5000, 0]
+    # np.trapezoid([0, 5000, 0], [4000, 5000, 6000]) = (0.5 * (0+5000) * 1000) + (0.5 * (5000+0) * 1000) = 2500000 + 2500000 = 5000000
+    # np.trapezoid([0, 1, 0], [4000, 5000, 6000]) = (0.5 * (0+1) * 1000) + (0.5 * (1+0) * 1000) = 500 + 500 = 1000
+    # wave_eff = 5000000 / 1000 = 5000
+    assert np.isclose(uf.wave_eff, 5000)
+    
+    sens = uf.get_sens()
+    assert np.allclose(sens[0], [4000, 5000, 6000])
+    assert np.allclose(sens[1], [0, 1, 0])
+
+def test_uvoir_filter_infer_all():
+    # Test inferring telescope and instrument from filter name
+    # Using "g" which should be in filter_defaults.json as ["SLOAN", "SDSS", "g"]
+    with patch("infer_filter_info.filter_mappings.SvoFps.get_transmission_data") as mock_get_transmission_data:
+        mock_table = MagicMock()
+        mock_table.__getitem__.side_effect = lambda key: {
+            "Wavelength": MagicMock(data=MagicMock(data=np.array([4000, 5000, 6000])), unit=u.AA),
+            "Transmission": MagicMock(data=MagicMock(data=np.array([0, 1, 0])))
+        }[key]
+        mock_get_transmission_data.return_value = mock_table
+        
+        uf = UvoirFilter("g")
+        assert uf.telescope == "SLOAN"
+        assert uf.instrument == "SDSS"
+        assert uf.filter_name == "g"
+        assert uf.svo_filter_id == "SLOAN/SDSS.g"
