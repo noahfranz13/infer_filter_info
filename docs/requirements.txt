@@ -1,0 +1,8 @@
+sphinx
+furo
+nbsphinx
+ipykernel
+pandoc
+numpy
+astropy
+astroquery
