@@ -26,7 +26,9 @@ classifiers = [
 ]
 
 dependencies = [
-  "astroquery"
+"numpy",
+"astropy",
+"astroquery"
 ]
 
 [project.urls]
