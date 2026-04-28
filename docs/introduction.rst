@@ -10,14 +10,19 @@ The goal of this mini python package is to standardize the way we do this.
 Installation
 ------------
 
-You can install the package from source:
+You can install the package directly from PyPI:
 
 .. code-block:: bash
 
-   pip install .
+   pip install infer-filter-info
 
-Or with documentation dependencies:
+Developer Installation
+----------------------
+
+To install the package from source for development:
 
 .. code-block:: bash
 
-   pip install .[docs]
+   git clone https://github.com/noahfranz13/infer_filter_info.git
+   cd infer_filter_info
+   pip install -e .[dev,docs]

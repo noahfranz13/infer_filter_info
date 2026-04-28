@@ -8,6 +8,7 @@ Welcome to infer_filter_info's documentation!
    introduction
    api
    examples/example
+   contributing
 
 Indices and tables
 ==================
