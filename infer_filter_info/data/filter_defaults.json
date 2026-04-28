@@ -1,0 +1,1342 @@
+{
+    "FUV": [
+        "GALEX",
+        "GALEX",
+        "FUV"
+    ],
+    "NUV": [
+        "GALEX",
+        "GALEX",
+        "NUV"
+    ],
+    "UVW2": [
+        "Swift",
+        "UVOT",
+        "UVW2"
+    ],
+    "uvw2": [
+        "Swift",
+        "UVOT",
+        "UVW2"
+    ],
+    "uw2": [
+        "Swift",
+        "UVOT",
+        "UVW2"
+    ],
+    "UVM2": [
+        "Swift",
+        "UVOT",
+        "UVM2"
+    ],
+    "uvm2": [
+        "Swift",
+        "UVOT",
+        "UVM2"
+    ],
+    "um2": [
+        "Swift",
+        "UVOT",
+        "UVM2"
+    ],
+    "UVW1": [
+        "Swift",
+        "UVOT",
+        "UVW1"
+    ],
+    "uvw1": [
+        "Swift",
+        "UVOT",
+        "UVW1"
+    ],
+    "uw1": [
+        "Swift",
+        "UVOT",
+        "UVW1"
+    ],
+    "u": [
+        "SLOAN",
+        "SDSS",
+        "u"
+    ],
+    "u'": [
+        "SLOAN",
+        "SDSS",
+        "u"
+    ],
+    "uprime": [
+        "SLOAN",
+        "SDSS",
+        "u"
+    ],
+    "up": [
+        "SLOAN",
+        "SDSS",
+        "u"
+    ],
+    "u-Sloan": [
+        "SLOAN",
+        "SDSS",
+        "u"
+    ],
+    "u_Sloan": [
+        "SLOAN",
+        "SDSS",
+        "u"
+    ],
+    "Sloan_u": [
+        "SLOAN",
+        "SDSS",
+        "u"
+    ],
+    "Sloan-u": [
+        "SLOAN",
+        "SDSS",
+        "u"
+    ],
+    "u-sloan": [
+        "SLOAN",
+        "SDSS",
+        "u"
+    ],
+    "u_sloan": [
+        "SLOAN",
+        "SDSS",
+        "u"
+    ],
+    "sloan_u": [
+        "SLOAN",
+        "SDSS",
+        "u"
+    ],
+    "sloan-u": [
+        "SLOAN",
+        "SDSS",
+        "u"
+    ],
+    "g": [
+        "SLOAN",
+        "SDSS",
+        "g"
+    ],
+    "g'": [
+        "SLOAN",
+        "SDSS",
+        "g"
+    ],
+    "gprime": [
+        "SLOAN",
+        "SDSS",
+        "g"
+    ],
+    "g-Sloan": [
+        "SLOAN",
+        "SDSS",
+        "g"
+    ],
+    "g_Sloan": [
+        "SLOAN",
+        "SDSS",
+        "g"
+    ],
+    "Sloan_g": [
+        "SLOAN",
+        "SDSS",
+        "g"
+    ],
+    "Sloan-g": [
+        "SLOAN",
+        "SDSS",
+        "g"
+    ],
+    "g-sloan": [
+        "SLOAN",
+        "SDSS",
+        "g"
+    ],
+    "g_sloan": [
+        "SLOAN",
+        "SDSS",
+        "g"
+    ],
+    "sloan_g": [
+        "SLOAN",
+        "SDSS",
+        "g"
+    ],
+    "sloan-g": [
+        "SLOAN",
+        "SDSS",
+        "g"
+    ],
+    "gp": [
+        "SLOAN",
+        "SDSS",
+        "g"
+    ],
+    "r": [
+        "SLOAN",
+        "SDSS",
+        "r"
+    ],
+    "r'": [
+        "SLOAN",
+        "SDSS",
+        "r"
+    ],
+    "rprime": [
+        "SLOAN",
+        "SDSS",
+        "r"
+    ],
+    "r-Sloan": [
+        "SLOAN",
+        "SDSS",
+        "r"
+    ],
+    "r_Sloan": [
+        "SLOAN",
+        "SDSS",
+        "r"
+    ],
+    "Sloan_r": [
+        "SLOAN",
+        "SDSS",
+        "r"
+    ],
+    "Sloan-r": [
+        "SLOAN",
+        "SDSS",
+        "r"
+    ],
+    "r-sloan": [
+        "SLOAN",
+        "SDSS",
+        "r"
+    ],
+    "r_sloan": [
+        "SLOAN",
+        "SDSS",
+        "r"
+    ],
+    "sloan_r": [
+        "SLOAN",
+        "SDSS",
+        "r"
+    ],
+    "sloan-r": [
+        "SLOAN",
+        "SDSS",
+        "r"
+    ],
+    "rp": [
+        "SLOAN",
+        "SDSS",
+        "r"
+    ],
+    "i": [
+        "SLOAN",
+        "SDSS",
+        "i"
+    ],
+    "i'": [
+        "SLOAN",
+        "SDSS",
+        "i"
+    ],
+    "iprime": [
+        "SLOAN",
+        "SDSS",
+        "i"
+    ],
+    "ip": [
+        "SLOAN",
+        "SDSS",
+        "i"
+    ],
+    "i-Sloan": [
+        "SLOAN",
+        "SDSS",
+        "i"
+    ],
+    "i_Sloan": [
+        "SLOAN",
+        "SDSS",
+        "i"
+    ],
+    "Sloan_i": [
+        "SLOAN",
+        "SDSS",
+        "i"
+    ],
+    "Sloan-i": [
+        "SLOAN",
+        "SDSS",
+        "i"
+    ],
+    "i-sloan": [
+        "SLOAN",
+        "SDSS",
+        "i"
+    ],
+    "i_sloan": [
+        "SLOAN",
+        "SDSS",
+        "i"
+    ],
+    "sloan_i": [
+        "SLOAN",
+        "SDSS",
+        "i"
+    ],
+    "sloan-i": [
+        "SLOAN",
+        "SDSS",
+        "i"
+    ],
+    "z": [
+        "SLOAN",
+        "SDSS",
+        "z"
+    ],
+    "z'": [
+        "SLOAN",
+        "SDSS",
+        "z"
+    ],
+    "zprime": [
+        "SLOAN",
+        "SDSS",
+        "z"
+    ],
+    "z-Sloan": [
+        "SLOAN",
+        "SDSS",
+        "z"
+    ],
+    "z_Sloan": [
+        "SLOAN",
+        "SDSS",
+        "z"
+    ],
+    "Sloan_z": [
+        "SLOAN",
+        "SDSS",
+        "z"
+    ],
+    "Sloan-z": [
+        "SLOAN",
+        "SDSS",
+        "z"
+    ],
+    "z-sloan": [
+        "SLOAN",
+        "SDSS",
+        "z"
+    ],
+    "z_sloan": [
+        "SLOAN",
+        "SDSS",
+        "z"
+    ],
+    "sloan_z": [
+        "SLOAN",
+        "SDSS",
+        "z"
+    ],
+    "sloan-z": [
+        "SLOAN",
+        "SDSS",
+        "z"
+    ],
+    "zp": [
+        "SLOAN",
+        "SDSS",
+        "z"
+    ],
+    "W1": [
+        "WISE",
+        "WISE",
+        "W1"
+    ],
+    "w1": [
+        "WISE",
+        "WISE",
+        "W1"
+    ],
+    "W2": [
+        "WISE",
+        "WISE",
+        "W2"
+    ],
+    "w2": [
+        "WISE",
+        "WISE",
+        "W2"
+    ],
+    "c": [
+        "Misc",
+        "ATLAS",
+        "cyan"
+    ],
+    "cyan": [
+        "Misc",
+        "ATLAS",
+        "cyan"
+    ],
+    "o": [
+        "Misc",
+        "ATLAS",
+        "orange"
+    ],
+    "orange": [
+        "Misc",
+        "ATLAS",
+        "orange"
+    ],
+    "U": [
+        "Generic",
+        "Johnson_UBVRIJHKL",
+        "U"
+    ],
+    "B": [
+        "Generic",
+        "Johnson_UBVRIJHKL",
+        "B"
+    ],
+    "V": [
+        "Generic",
+        "Johnson_UBVRIJHKL",
+        "V"
+    ],
+    "R": [
+        "Generic",
+        "Johnson_UBVRIJHKL",
+        "R"
+    ],
+    "I": [
+        "Generic",
+        "Johnson_UBVRIJHKL",
+        "I"
+    ],
+    "K": [
+        "Generic",
+        "Johnson_UBVRIJHKL",
+        "K"
+    ],
+    "L": [
+        "Generic",
+        "Johnson_UBVRIJHKL",
+        "L"
+    ],
+    "M": [
+        "Generic",
+        "Johnson",
+        "M"
+    ],
+    "J": [
+        "2MASS",
+        "2MASS",
+        "J"
+    ],
+    "H": [
+        "2MASS",
+        "2MASS",
+        "H"
+    ],
+    "Ks": [
+        "2MASS",
+        "2MASS",
+        "Ks"
+    ],
+    "u-DECam": [
+        "CTIO",
+        "DECam",
+        "u"
+    ],
+    "DECam-u": [
+        "CTIO",
+        "DECam",
+        "u"
+    ],
+    "g-DECam": [
+        "CTIO",
+        "DECam",
+        "g"
+    ],
+    "DECam-g": [
+        "CTIO",
+        "DECam",
+        "g"
+    ],
+    "r-DECam": [
+        "CTIO",
+        "DECam",
+        "r"
+    ],
+    "DECam-r": [
+        "CTIO",
+        "DECam",
+        "r"
+    ],
+    "i-DECam": [
+        "CTIO",
+        "DECam",
+        "i"
+    ],
+    "DECam-i": [
+        "CTIO",
+        "DECam",
+        "i"
+    ],
+    "z-DECam": [
+        "CTIO",
+        "DECam",
+        "z"
+    ],
+    "DECam-z": [
+        "CTIO",
+        "DECam",
+        "z"
+    ],
+    "Y-DECam": [
+        "CTIO",
+        "DECam",
+        "Y"
+    ],
+    "DECam-Y": [
+        "CTIO",
+        "DECam",
+        "Y"
+    ],
+    "F560W": [
+        "JWST",
+        "MIRI",
+        "F560W"
+    ],
+    "F770W": [
+        "JWST",
+        "MIRI",
+        "F770W"
+    ],
+    "F1000W": [
+        "JWST",
+        "MIRI",
+        "F1000W"
+    ],
+    "F1065C": [
+        "JWST",
+        "MIRI",
+        "F1065C"
+    ],
+    "F1140C": [
+        "JWST",
+        "MIRI",
+        "F1140C"
+    ],
+    "F1130W": [
+        "JWST",
+        "MIRI",
+        "F1130W"
+    ],
+    "F1280W": [
+        "JWST",
+        "MIRI",
+        "F1280W"
+    ],
+    "F1500W": [
+        "JWST",
+        "MIRI",
+        "F1500W"
+    ],
+    "F1550C": [
+        "JWST",
+        "MIRI",
+        "F1550C"
+    ],
+    "F1800W": [
+        "JWST",
+        "MIRI",
+        "F1800W"
+    ],
+    "F2100W": [
+        "JWST",
+        "MIRI",
+        "F2100W"
+    ],
+    "F2300C": [
+        "JWST",
+        "MIRI",
+        "F2300C"
+    ],
+    "F2550W": [
+        "JWST",
+        "MIRI",
+        "F2550W"
+    ],
+    "F070W": [
+        "JWST",
+        "NIRCam",
+        "F070W"
+    ],
+    "F090W": [
+        "JWST",
+        "NIRCam",
+        "F090W"
+    ],
+    "F115W": [
+        "JWST",
+        "NIRCam",
+        "F115W"
+    ],
+    "F140M": [
+        "JWST",
+        "NIRCam",
+        "F140M"
+    ],
+    "F150W": [
+        "JWST",
+        "NIRCam",
+        "F150W"
+    ],
+    "F162M": [
+        "JWST",
+        "NIRCam",
+        "F162M"
+    ],
+    "F150W2": [
+        "JWST",
+        "NIRCam",
+        "F150W2"
+    ],
+    "F182M": [
+        "JWST",
+        "NIRCam",
+        "F182M"
+    ],
+    "F187N": [
+        "JWST",
+        "NIRCam",
+        "F187N"
+    ],
+    "F200W": [
+        "JWST",
+        "NIRCam",
+        "F200W"
+    ],
+    "F210M": [
+        "JWST",
+        "NIRCam",
+        "F210M"
+    ],
+    "F212N": [
+        "JWST",
+        "NIRCam",
+        "F212N"
+    ],
+    "F250M": [
+        "JWST",
+        "NIRCam",
+        "F250M"
+    ],
+    "F277W": [
+        "JWST",
+        "NIRCam",
+        "F277W"
+    ],
+    "F300M": [
+        "JWST",
+        "NIRCam",
+        "F300M"
+    ],
+    "F323N": [
+        "JWST",
+        "NIRCam",
+        "F323N"
+    ],
+    "F322W2": [
+        "JWST",
+        "NIRCam",
+        "F322W2"
+    ],
+    "F335M": [
+        "JWST",
+        "NIRCam",
+        "F335M"
+    ],
+    "F356W": [
+        "JWST",
+        "NIRCam",
+        "F356W"
+    ],
+    "F360M": [
+        "JWST",
+        "NIRCam",
+        "F360M"
+    ],
+    "F405N": [
+        "JWST",
+        "NIRCam",
+        "F405N"
+    ],
+    "F410M": [
+        "JWST",
+        "NIRCam",
+        "F410M"
+    ],
+    "F430M": [
+        "JWST",
+        "NIRCam",
+        "F430M"
+    ],
+    "F444W": [
+        "JWST",
+        "NIRCam",
+        "F444W"
+    ],
+    "F460M": [
+        "JWST",
+        "NIRCam",
+        "F460M"
+    ],
+    "F466N": [
+        "JWST",
+        "NIRCam",
+        "F466N"
+    ],
+    "F470N": [
+        "JWST",
+        "NIRCam",
+        "F470N"
+    ],
+    "F480M": [
+        "JWST",
+        "NIRCam",
+        "F480M"
+    ],
+    "F158M": [
+        "JWST",
+        "NIRISS",
+        "F158M"
+    ],
+    "F380M": [
+        "JWST",
+        "NIRISS",
+        "F380M"
+    ],
+    "F098M": [
+        "HST",
+        "WFC3_IR",
+        "F098M"
+    ],
+    "G102": [
+        "HST",
+        "WFC3_IR",
+        "G102"
+    ],
+    "F105W": [
+        "HST",
+        "WFC3_IR",
+        "F105W"
+    ],
+    "F110W": [
+        "HST",
+        "WFC3_IR",
+        "F110W"
+    ],
+    "F125W": [
+        "HST",
+        "WFC3_IR",
+        "F125W"
+    ],
+    "F126N": [
+        "HST",
+        "WFC3_IR",
+        "F126N"
+    ],
+    "F127M": [
+        "HST",
+        "WFC3_IR",
+        "F127M"
+    ],
+    "F128N": [
+        "HST",
+        "WFC3_IR",
+        "F128N"
+    ],
+    "F130N": [
+        "HST",
+        "WFC3_IR",
+        "F130N"
+    ],
+    "F132N": [
+        "HST",
+        "WFC3_IR",
+        "F132N"
+    ],
+    "F139M": [
+        "HST",
+        "WFC3_IR",
+        "F139M"
+    ],
+    "F140W": [
+        "HST",
+        "WFC3_IR",
+        "F140W"
+    ],
+    "G141": [
+        "HST",
+        "WFC3_IR",
+        "G141"
+    ],
+    "F153M": [
+        "HST",
+        "WFC3_IR",
+        "F153M"
+    ],
+    "F160W": [
+        "HST",
+        "WFC3_IR",
+        "F160W"
+    ],
+    "F167N": [
+        "HST",
+        "WFC3_IR",
+        "F167N"
+    ],
+    "F218W": [
+        "HST",
+        "WFC3_UVIS1",
+        "F218W"
+    ],
+    "FQ232N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ232N"
+    ],
+    "F225W": [
+        "HST",
+        "WFC3_UVIS1",
+        "F225W"
+    ],
+    "FQ243N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ243N"
+    ],
+    "F275W": [
+        "HST",
+        "WFC3_UVIS1",
+        "F275W"
+    ],
+    "F280N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F280N"
+    ],
+    "F300X": [
+        "HST",
+        "WFC3_UVIS1",
+        "F300X"
+    ],
+    "F336W": [
+        "HST",
+        "WFC3_UVIS1",
+        "F336W"
+    ],
+    "F343N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F343N"
+    ],
+    "F373N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F373N"
+    ],
+    "FQ378N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ378N"
+    ],
+    "FQ387N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ387N"
+    ],
+    "F390M": [
+        "HST",
+        "WFC3_UVIS1",
+        "F390M"
+    ],
+    "F395N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F395N"
+    ],
+    "F390W": [
+        "HST",
+        "WFC3_UVIS1",
+        "F390W"
+    ],
+    "FQ422M": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ422M"
+    ],
+    "F438W": [
+        "HST",
+        "WFC3_UVIS1",
+        "F438W"
+    ],
+    "FQ436N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ436N"
+    ],
+    "FQ437N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ437N"
+    ],
+    "F467M": [
+        "HST",
+        "WFC3_UVIS1",
+        "F467M"
+    ],
+    "F469N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F469N"
+    ],
+    "G280": [
+        "HST",
+        "WFC3_UVIS1",
+        "G280"
+    ],
+    "F475W": [
+        "HST",
+        "WFC3_UVIS1",
+        "F475W"
+    ],
+    "F487N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F487N"
+    ],
+    "FQ492N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ492N"
+    ],
+    "F502N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F502N"
+    ],
+    "F475X": [
+        "HST",
+        "WFC3_UVIS1",
+        "F475X"
+    ],
+    "FQ508N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ508N"
+    ],
+    "F555W": [
+        "HST",
+        "WFC3_UVIS1",
+        "F555W"
+    ],
+    "F547M": [
+        "HST",
+        "WFC3_UVIS1",
+        "F547M"
+    ],
+    "FQ575N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ575N"
+    ],
+    "F606W": [
+        "HST",
+        "WFC3_UVIS1",
+        "F606W"
+    ],
+    "F200LP": [
+        "HST",
+        "WFC3_UVIS1",
+        "F200LP"
+    ],
+    "FQ619N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ619N"
+    ],
+    "F621M": [
+        "HST",
+        "WFC3_UVIS1",
+        "F621M"
+    ],
+    "F625W": [
+        "HST",
+        "WFC3_UVIS1",
+        "F625W"
+    ],
+    "F631N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F631N"
+    ],
+    "FQ634N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ634N"
+    ],
+    "F645N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F645N"
+    ],
+    "F350LP": [
+        "HST",
+        "WFC3_UVIS1",
+        "F350LP"
+    ],
+    "F656N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F656N"
+    ],
+    "F657N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F657N"
+    ],
+    "F658N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F658N"
+    ],
+    "F665N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F665N"
+    ],
+    "FQ672N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ672N"
+    ],
+    "FQ674N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ674N"
+    ],
+    "F673N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F673N"
+    ],
+    "F680N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F680N"
+    ],
+    "F689M": [
+        "HST",
+        "WFC3_UVIS1",
+        "F689M"
+    ],
+    "FQ727N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ727N"
+    ],
+    "FQ750N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ750N"
+    ],
+    "F763M": [
+        "HST",
+        "WFC3_UVIS1",
+        "F763M"
+    ],
+    "F600LP": [
+        "HST",
+        "WFC3_UVIS1",
+        "F600LP"
+    ],
+    "F775W": [
+        "HST",
+        "WFC3_UVIS1",
+        "F775W"
+    ],
+    "F814W": [
+        "HST",
+        "WFC3_UVIS1",
+        "F814W"
+    ],
+    "F845M": [
+        "HST",
+        "WFC3_UVIS1",
+        "F845M"
+    ],
+    "FQ889N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ889N"
+    ],
+    "FQ906N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ906N"
+    ],
+    "F850LP": [
+        "HST",
+        "WFC3_UVIS1",
+        "F850LP"
+    ],
+    "FQ924N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ924N"
+    ],
+    "FQ937N": [
+        "HST",
+        "WFC3_UVIS1",
+        "FQ937N"
+    ],
+    "F953N": [
+        "HST",
+        "WFC3_UVIS1",
+        "F953N"
+    ],
+    "FR388N": [
+        "HST",
+        "ACS_WFC",
+        "FR388N"
+    ],
+    "FR423N": [
+        "HST",
+        "ACS_WFC",
+        "FR423N"
+    ],
+    "F435W": [
+        "HST",
+        "ACS_WFC",
+        "F435W"
+    ],
+    "FR459M": [
+        "HST",
+        "ACS_WFC",
+        "FR459M"
+    ],
+    "FR462N": [
+        "HST",
+        "ACS_WFC",
+        "FR462N"
+    ],
+    "FR505N": [
+        "HST",
+        "ACS_WFC",
+        "FR505N"
+    ],
+    "FR551N": [
+        "HST",
+        "ACS_WFC",
+        "FR551N"
+    ],
+    "F550M": [
+        "HST",
+        "ACS_WFC",
+        "F550M"
+    ],
+    "FR601N": [
+        "HST",
+        "ACS_WFC",
+        "FR601N"
+    ],
+    "FR647M": [
+        "HST",
+        "ACS_WFC",
+        "FR647M"
+    ],
+    "FR656N": [
+        "HST",
+        "ACS_WFC",
+        "FR656N"
+    ],
+    "F660N": [
+        "HST",
+        "ACS_WFC",
+        "F660N"
+    ],
+    "FR716N": [
+        "HST",
+        "ACS_WFC",
+        "FR716N"
+    ],
+    "POL_UV": [
+        "HST",
+        "ACS_WFC",
+        "POL_UV"
+    ],
+    "POL_V": [
+        "HST",
+        "ACS_WFC",
+        "POL_V"
+    ],
+    "G800L": [
+        "HST",
+        "ACS_WFC",
+        "G800L"
+    ],
+    "FR782N": [
+        "HST",
+        "ACS_WFC",
+        "FR782N"
+    ],
+    "FR853N": [
+        "HST",
+        "ACS_WFC",
+        "FR853N"
+    ],
+    "F892N": [
+        "HST",
+        "ACS_WFC",
+        "F892N"
+    ],
+    "FR914M": [
+        "HST",
+        "ACS_WFC",
+        "FR914M"
+    ],
+    "FR931N": [
+        "HST",
+        "ACS_WFC",
+        "FR931N"
+    ],
+    "FR1016N": [
+        "HST",
+        "ACS_WFC",
+        "FR1016N"
+    ],
+    "pseudobolo35": [
+        "PAN-STARRS",
+        "PS1",
+        "w"
+    ],
+    "Itagaki": [
+        "PAN-STARRS",
+        "PS1",
+        "w"
+    ],
+    "white": [
+        "PAN-STARRS",
+        "PS1",
+        "w"
+    ],
+    "unfilt.": [
+        "PAN-STARRS",
+        "PS1",
+        "w"
+    ],
+    "0": [
+        "PAN-STARRS",
+        "PS1",
+        "w"
+    ],
+    "griz": [
+        "PAN-STARRS",
+        "PS1",
+        "w"
+    ],
+    "w": [
+        "PAN-STARRS",
+        "PS1",
+        "w"
+    ],
+    "RGB": [
+        "PAN-STARRS",
+        "PS1",
+        "w"
+    ],
+    "DLT40": [
+        "PAN-STARRS",
+        "PS1",
+        "w"
+    ],
+    "C": [
+        "Misc",
+        "CRTS",
+        "C"
+    ],
+    "clear": [
+        "Misc",
+        "CRTS",
+        "C"
+    ],
+    "Clear": [
+        "Misc",
+        "CRTS",
+        "C"
+    ],
+    "Open": [
+        "Misc",
+        "CRTS",
+        "C"
+    ],
+    "b": [
+        "Generic",
+        "Stromgren",
+        "b"
+    ],
+    "v": [
+        "Generic",
+        "Stromgren",
+        "v"
+    ],
+    "G": [
+        "GAIA",
+        "GAIA0",
+        "G"
+    ],
+    "Kepler": [
+        "Kepler",
+        "Kepler",
+        "K"
+    ],
+    "TESS": [
+        "TESS",
+        "TESS",
+        "Red"
+    ],
+    "y": [
+        "PAN-STARRS",
+        "PS1",
+        "y"
+    ],
+    "Rc": [
+        "Subaru",
+        "Suprime",
+        "Rc_filter"
+    ],
+    "z_s": [
+        "PAN-STARRS",
+        "PS1",
+        "z"
+    ],
+    "zs": [
+        "PAN-STARRS",
+        "PS1",
+        "z"
+    ],
+    "Ic": [
+        "Generic",
+        "Cousins",
+        "I"
+    ]
+}

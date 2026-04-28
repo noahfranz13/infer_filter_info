@@ -9,3 +9,6 @@ class InvalidObsTypeError(Exception):
 
     def __str__(self):
         return "The input obs_type is invalid. It should either be 'xray', 'uvoir', or 'radio'"
+
+class MissingDefaultError(Exception):
+    pass
