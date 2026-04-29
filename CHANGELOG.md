@@ -2,6 +2,13 @@
 
 
 
+## v0.1.1 (2026-04-29)
+
+### Fix
+
+* fix: add magnitude filter system for the UvoirFilter class ([`26266eb`](https://github.com/noahfranz13/infer_filter_info/commit/26266ebacc4c42fc9b0dd2320ed3ced3631ce8fd))
+
+
 ## v0.1.0 (2026-04-29)
 
 ### Feature
