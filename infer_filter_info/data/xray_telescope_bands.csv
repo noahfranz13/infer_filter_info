@@ -1,0 +1,23 @@
+Filter_Name,Telescope,Instrument,Eff_Energy_keV,Citation_URL,Comments
+0.2-10keV,Chandra,ACIS,1.414,https://chandra.harvard.edu/resources/handouts/lithos/chandraA_low.pdf,Mission ended July 2025
+0.09-3keV,Chandra,LETG + HRC,0.520,https://chandra.harvard.edu/resources/handouts/lithos/chandraA_low.pdf,Mission ended July 2025
+0.4-10keV,Chandra,HETG + ACIS,2.000,https://chandra.harvard.edu/resources/handouts/lithos/chandraA_low.pdf,Mission ended July 2025
+0.15-15keV,XMM-Newton,EPIC-MOS,1.500,https://www.cosmos.esa.int/web/xmm-newton/technical-details-epic,
+0.1-15keV,XMM-Newton,EPIC-pn,1.225,https://www.cosmos.esa.int/web/xmm-newton/technical-details-epic,
+0.2-10keV,Swift,XRT,1.414,https://swift.gsfc.nasa.gov/about_swift/xrt_desc.html,
+15-150keV,Swift,BAT,47.434,https://swift.gsfc.nasa.gov/about_swift/bat_desc.html,
+0.1-2.4keV,ROSAT,PSPC,0.490,https://heasarc.gsfc.nasa.gov/docs/rosat/cdroms/rosatcdvol1doc.html,Mission ended February 1999
+0.1-2.4keV,ROSAT,HRI,0.490,https://heasarc.gsfc.nasa.gov/docs/rosat/cdroms/rosatcdvol1doc.html,Mission ended February 1999
+3-79keV,NuSTAR,FPMA + FPMB,15.395,https://arxiv.org/pdf/1008.1362,
+0.2-12keV,Suzaku,XIS,1.549,https://heasarc.gsfc.nasa.gov/docs/suzaku/index.html,Mission ended August 2015
+10-70keV,Suzaku,HXD-PIN,26.458,https://heasarc.gsfc.nasa.gov/docs/suzaku/analysis/abc/node10.html,Mission ended August 2015
+50-700keV,Suzaku,HXD-GSO,187.083,https://heasarc.gsfc.nasa.gov/docs/suzaku/analysis/abc/node10.html,Mission ended August 2015
+2-60keV,RXTE,PCA,10.954,https://heasarc.gsfc.nasa.gov/docs/xte/learning_center/pca.html,Mission ended January 2012
+15-250keV,RXTE,HEXTE,61.237,https://heasarc.gsfc.nasa.gov/docs/xte/learning_center/hexte.html,Mission ended January 2012
+3-35keV,INTEGRAL,JEM-X,10.247,https://www.cosmos.esa.int/web/integral/instruments-jemx,
+15-1000keV,INTEGRAL,IBIS (ISGRI layer),122.474,https://www.cosmos.esa.int/web/integral/instruments-ibis,ISGRI is the top detector layer; sensitive 15-1000 keV with peak efficiency 20-100 keV
+100keV-10MeV,INTEGRAL,IBIS (PICsIT layer),1000.000,https://www.cosmos.esa.int/web/integral/instruments-ibis,PICsIT is the bottom detector layer; sits 90 mm below ISGRI
+18keV-8MeV,INTEGRAL,SPI,379.473,https://www.cosmos.esa.int/web/integral/instruments-spi,
+0.2-8keV,eROSITA (SRG),TM1-7,1.265,https://erosita.mpe.mpg.de/,German consortium operations resumed 2024 after suspension in Feb 2022
+1.7-12keV,XRISM,Resolve,4.517,https://heasarc.gsfc.nasa.gov/docs/xrism/proposals/POG/Introduction.html,Nominal range 0.3-12 keV; gate valve stuck closed limits in-orbit range to 1.7-12 keV
+0.4-13keV,XRISM,Xtend (SXI),2.280,https://heasarc.gsfc.nasa.gov/docs/xrism/proposals/POG/Xtend_SXI.html,Gate valve issue affects Resolve only; Xtend operates normally

@@ -2,7 +2,7 @@ import pytest
 import numpy as np
 from astropy import units as u
 from unittest.mock import patch, MagicMock
-from infer_filter_info.filter_mappings import RadioFilter, UvoirFilter, Filter
+from infer_filter_info.filter_mappings import RadioFilter, UvoirFilter, Filter, XrayFilter
 from infer_filter_info.exceptions import MissingDefaultError
 
 def test_filter_base_class():
@@ -84,3 +84,56 @@ def test_uvoir_filter_infer_all():
         assert uf.instrument == "SDSS"
         assert uf.filter_name == "g"
         assert uf.svo_filter_id == "SLOAN/SDSS.g"
+
+def test_xray_filter_init():
+    xf = XrayFilter("0.2-10keV", telescope="Swift", instrument="XRT")
+    assert xf.filter_name == "0.2-10keV"
+    assert xf.telescope == "Swift"
+    assert xf.instrument == "XRT"
+    assert xf.lower_energy_keV == 0.2
+    assert xf.upper_energy_keV == 10.0
+    
+    # wave_eff = sqrt(0.2 * 10) = sqrt(2) = 1.4142... keV
+    # 1.4142 keV to AA: h*c / E
+    expected_energy = np.sqrt(0.2 * 10.0) * u.keV
+    expected_wave = expected_energy.to(u.AA, equivalencies=u.spectral())
+    assert np.isclose(xf.wave_eff, expected_wave.value)
+
+def test_xray_filter_infer_all():
+    # "0.2-10keV" is in xray_bands.json as ["Swift", "XRT", "0.2-10keV", 1.414]
+    xf = XrayFilter("0.2-10keV")
+    assert xf.telescope == "Swift"
+    assert xf.instrument == "XRT"
+    assert xf.filter_name == "0.2-10keV"
+
+def test_xray_filter_get_sens():
+    xf = XrayFilter("0.2-10keV", telescope="Swift", instrument="XRT")
+    sens = xf.get_sens(n=5)
+    assert sens.shape == (2, 5)
+    # Energy 10 keV -> short wave, 0.2 keV -> long wave
+    w1 = (10 * u.keV).to(u.AA, equivalencies=u.spectral()).value
+    w2 = (0.2 * u.keV).to(u.AA, equivalencies=u.spectral()).value
+    assert np.isclose(sens[0][0], w1)
+    assert np.isclose(sens[0][-1], w2)
+    assert np.all(sens[1] == 1.0)
+
+def test_xray_filter_parsing_mixed_units():
+    xf = XrayFilter("100keV-1MeV", telescope="INTEGRAL", instrument="IBIS (PICsIT layer)")
+    assert xf.lower_energy_keV == 100.0
+    assert xf.upper_energy_keV == 1000.0 # 1 MeV = 1000 keV
+
+def test_xray_filter_invalid_format():
+    with pytest.raises(ValueError, match="Invalid filter_name format"):
+        XrayFilter("invalid-format")
+    
+    with pytest.raises(ValueError, match="Invalid filter_name format"):
+        XrayFilter("0.2-10")
+
+def test_xray_filter_illogical_range():
+    with pytest.raises(ValueError, match="must be less than upper bound"):
+        XrayFilter("10-2keV")
+
+def test_xray_filter_missing_default():
+    with pytest.raises(MissingDefaultError):
+        XrayFilter("100-200keV") # Not in xray_bands.json
+

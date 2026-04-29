@@ -1,1 +1,122 @@
-{}
+{
+    "0.2-10keV": [
+        "Swift",
+        "XRT",
+        "0.2-10keV",
+        1.414
+    ],
+    "0.09-3keV": [
+        "Chandra",
+        "LETG + HRC",
+        "0.09-3keV",
+        0.52
+    ],
+    "0.4-10keV": [
+        "Chandra",
+        "HETG + ACIS",
+        "0.4-10keV",
+        2.0
+    ],
+    "0.15-15keV": [
+        "XMM-Newton",
+        "EPIC-MOS",
+        "0.15-15keV",
+        1.5
+    ],
+    "0.1-15keV": [
+        "XMM-Newton",
+        "EPIC-pn",
+        "0.1-15keV",
+        1.225
+    ],
+    "15-150keV": [
+        "Swift",
+        "BAT",
+        "15-150keV",
+        47.434
+    ],
+    "0.1-2.4keV": [
+        "ROSAT",
+        "HRI",
+        "0.1-2.4keV",
+        0.49
+    ],
+    "3-79keV": [
+        "NuSTAR",
+        "FPMA + FPMB",
+        "3-79keV",
+        15.395
+    ],
+    "0.2-12keV": [
+        "Suzaku",
+        "XIS",
+        "0.2-12keV",
+        1.549
+    ],
+    "10-70keV": [
+        "Suzaku",
+        "HXD-PIN",
+        "10-70keV",
+        26.458
+    ],
+    "50-700keV": [
+        "Suzaku",
+        "HXD-GSO",
+        "50-700keV",
+        187.083
+    ],
+    "2-60keV": [
+        "RXTE",
+        "PCA",
+        "2-60keV",
+        10.954
+    ],
+    "15-250keV": [
+        "RXTE",
+        "HEXTE",
+        "15-250keV",
+        61.237
+    ],
+    "3-35keV": [
+        "INTEGRAL",
+        "JEM-X",
+        "3-35keV",
+        10.247
+    ],
+    "15-1000keV": [
+        "INTEGRAL",
+        "IBIS (ISGRI layer)",
+        "15-1000keV",
+        122.474
+    ],
+    "100keV-10MeV": [
+        "INTEGRAL",
+        "IBIS (PICsIT layer)",
+        "100keV-10MeV",
+        1000.0
+    ],
+    "18keV-8MeV": [
+        "INTEGRAL",
+        "SPI",
+        "18keV-8MeV",
+        379.473
+    ],
+    "0.2-8keV": [
+        "eROSITA (SRG)",
+        "TM1-7",
+        "0.2-8keV",
+        1.265
+    ],
+    "1.7-12keV": [
+        "XRISM",
+        "Resolve",
+        "1.7-12keV",
+        4.517
+    ],
+    "0.4-13keV": [
+        "XRISM",
+        "Xtend (SXI)",
+        "0.4-13keV",
+        2.28
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "ACIS": {
+        "0.2-10keV": "Chandra"
+    },
+    "LETG + HRC": {
+        "0.09-3keV": "Chandra"
+    },
+    "HETG + ACIS": {
+        "0.4-10keV": "Chandra"
+    },
+    "EPIC-MOS": {
+        "0.15-15keV": "XMM-Newton"
+    },
+    "EPIC-pn": {
+        "0.1-15keV": "XMM-Newton"
+    },
+    "XRT": {
+        "0.2-10keV": "Swift"
+    },
+    "BAT": {
+        "15-150keV": "Swift"
+    },
+    "PSPC": {
+        "0.1-2.4keV": "ROSAT"
+    },
+    "HRI": {
+        "0.1-2.4keV": "ROSAT"
+    },
+    "FPMA + FPMB": {
+        "3-79keV": "NuSTAR"
+    },
+    "XIS": {
+        "0.2-12keV": "Suzaku"
+    },
+    "HXD-PIN": {
+        "10-70keV": "Suzaku"
+    },
+    "HXD-GSO": {
+        "50-700keV": "Suzaku"
+    },
+    "PCA": {
+        "2-60keV": "RXTE"
+    },
+    "HEXTE": {
+        "15-250keV": "RXTE"
+    },
+    "JEM-X": {
+        "3-35keV": "INTEGRAL"
+    },
+    "IBIS (ISGRI layer)": {
+        "15-1000keV": "INTEGRAL"
+    },
+    "IBIS (PICsIT layer)": {
+        "100keV-10MeV": "INTEGRAL"
+    },
+    "SPI": {
+        "18keV-8MeV": "INTEGRAL"
+    },
+    "TM1-7": {
+        "0.2-8keV": "eROSITA (SRG)"
+    },
+    "Resolve": {
+        "1.7-12keV": "XRISM"
+    },
+    "Xtend (SXI)": {
+        "0.4-13keV": "XRISM"
+    }
+}

@@ -24,8 +24,15 @@ def test_infer_filter_info_radio():
     assert sens.shape == (2, 100)
 
 def test_infer_filter_info_xray():
-    with pytest.raises(NotImplementedError):
-        infer_filter_info("soft", obs_type="xray")
+    # Swift XRT 0.2-10keV band
+    wave_eff, sens = infer_filter_info("0.2-10keV", telescope="Swift", instrument="XRT", obs_type="xray")
+    
+    expected_energy = np.sqrt(0.2 * 10.0) * u.keV
+    expected_wave = expected_energy.to(u.AA, equivalencies=u.spectral())
+    
+    assert np.isclose(wave_eff, expected_wave.value)
+    assert sens.shape == (2, 100)
+    assert np.all(sens[1] == 1.0)
 
 def test_infer_filter_info_invalid_obs_type():
     from infer_filter_info.exceptions import InvalidObsTypeError

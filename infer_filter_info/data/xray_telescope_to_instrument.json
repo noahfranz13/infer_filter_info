@@ -1,0 +1,43 @@
+{
+    "Chandra": {
+        "0.2-10keV": "ACIS",
+        "0.09-3keV": "LETG + HRC",
+        "0.4-10keV": "HETG + ACIS"
+    },
+    "XMM-Newton": {
+        "0.15-15keV": "EPIC-MOS",
+        "0.1-15keV": "EPIC-pn"
+    },
+    "Swift": {
+        "0.2-10keV": "XRT",
+        "15-150keV": "BAT"
+    },
+    "ROSAT": {
+        "0.1-2.4keV": "HRI"
+    },
+    "NuSTAR": {
+        "3-79keV": "FPMA + FPMB"
+    },
+    "Suzaku": {
+        "0.2-12keV": "XIS",
+        "10-70keV": "HXD-PIN",
+        "50-700keV": "HXD-GSO"
+    },
+    "RXTE": {
+        "2-60keV": "PCA",
+        "15-250keV": "HEXTE"
+    },
+    "INTEGRAL": {
+        "3-35keV": "JEM-X",
+        "15-1000keV": "IBIS (ISGRI layer)",
+        "100keV-10MeV": "IBIS (PICsIT layer)",
+        "18keV-8MeV": "SPI"
+    },
+    "eROSITA (SRG)": {
+        "0.2-8keV": "TM1-7"
+    },
+    "XRISM": {
+        "1.7-12keV": "Resolve",
+        "0.4-13keV": "Xtend (SXI)"
+    }
+}
