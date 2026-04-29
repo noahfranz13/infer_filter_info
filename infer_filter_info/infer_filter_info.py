@@ -18,7 +18,8 @@ def infer_filter_info(
         telescope:str=None,
         instrument:str=None,
         obs_type:str="uvoir",
-        out_wave_unit:u.Unit = u.AA
+        out_wave_unit:u.Unit = u.AA,
+        magsys:str = None
 ) -> (u.Quantity,np.ndarray):
     """
     Infer information about an astronomical photometric filter based on the filter name,
@@ -35,6 +36,9 @@ def infer_filter_info(
         obs_type (str): Either "uvoir" for UV/Optical/IR filters, in which we will rely
                         on the SVO Filter Profile Service, or "radio", or "xray". 
         out_wave_unit (astropy.units.Unit): An astropy wavelength or frequency unit 
+        magsys (str): The magnitude system to store in the UvoirFilter class. An assumed
+                      mapping will be used if not provided. If the filter isn't in the
+                      mapping then AB will be assumed.
     Returns:
         A tuple of a float with the effective wavelength and the transmission curve as
         a 2 dimensional numpy array (first column is wavelength, second is
@@ -46,7 +50,8 @@ def infer_filter_info(
             filter_name,
             telescope=telescope,
             instrument=instrument,
-            out_wave_unit=out_wave_unit
+            out_wave_unit=out_wave_unit,
+            magsys=magsys
         )
     elif obs_type == "radio":
         filt = RadioFilter(

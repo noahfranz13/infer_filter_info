@@ -85,6 +85,31 @@ def test_uvoir_filter_infer_all():
         assert uf.filter_name == "g"
         assert uf.svo_filter_id == "SLOAN/SDSS.g"
 
+def test_uvoir_filter_magsys():
+    with patch("infer_filter_info.filter_mappings.SvoFps.get_transmission_data") as mock_get_transmission_data:
+        mock_table = MagicMock()
+        mock_table.__getitem__.side_effect = lambda key: {
+            "Wavelength": MagicMock(data=MagicMock(data=np.array([4000, 5000, 6000])), unit=u.AA),
+            "Transmission": MagicMock(data=MagicMock(data=np.array([0, 1, 0])))
+        }[key]
+        mock_get_transmission_data.return_value = mock_table
+        
+        # Explicit magsys
+        uf = UvoirFilter("g", magsys="vega")
+        assert uf.magsys == "vega"
+        
+        # Default magsys from map (V -> vega)
+        uf_v = UvoirFilter("V")
+        assert uf_v.magsys == "vega"
+        
+        # Another from map (F280N -> A)
+        uf_f280n = UvoirFilter("F280N")
+        assert uf_f280n.magsys == "AB"
+        
+        # Fallback magsys (unknown filter with explicit telescope -> AB)
+        uf_unknown = UvoirFilter("unknown_filter", telescope="Palomar", instrument="ZTF")
+        assert uf_unknown.magsys == "AB"
+
 def test_xray_filter_init():
     xf = XrayFilter("0.2-10keV", telescope="Swift", instrument="XRT")
     assert xf.filter_name == "0.2-10keV"

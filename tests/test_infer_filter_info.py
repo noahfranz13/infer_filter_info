@@ -45,3 +45,20 @@ def test_infer_filter_info_out_wave_unit():
     assert np.isclose(wave_eff.value, expected_wave.value)
     assert wave_eff.unit == u.m
     assert np.all(sens[0] < 1.0) # values in meters for 1.5GHz should be around 0.2m
+
+@patch("infer_filter_info.filter_mappings.SvoFps.get_transmission_data")
+def test_infer_filter_info_magsys(mock_get_transmission_data):
+    mock_table = MagicMock()
+    mock_table.__getitem__.side_effect = lambda key: {
+        "Wavelength": MagicMock(data=MagicMock(data=np.array([4000, 5000, 6000])), unit=u.AA),
+        "Transmission": MagicMock(data=MagicMock(data=np.array([0, 1, 0])))
+    }[key]
+    mock_get_transmission_data.return_value = mock_table
+
+    # We can't easily check the magsys attribute of the internal filter object
+    # from the return values of infer_filter_info, but we can verify it doesn't crash
+    # and we can test it by manually creating a UvoirFilter (already done in test_filter_mappings.py)
+    # However, to be thorough, we can check if it runs without error.
+    wave_eff, sens = infer_filter_info("g", magsys="vega")
+    assert np.isclose(wave_eff, 5000)
+

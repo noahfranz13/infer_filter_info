@@ -279,11 +279,12 @@ class XrayFilter(Filter):
     
 class UvoirFilter(Filter):
 
-    def __init__(self, filter_name:str, telescope:str=None, instrument:str=None, out_wave_unit:u.Unit=u.AA):
+    def __init__(self, filter_name:str, telescope:str=None, instrument:str=None, out_wave_unit:u.Unit=u.AA, magsys=None):
         # some private paths to json data
         _FILTER_DEFAULTS_PATH = os.path.join(DATADIR, "filter_defaults.json")
         _INSTRUMENT_MAP_PATH = os.path.join(DATADIR, "telescope_to_instrument.json")
         _TELESCOPE_MAP_PATH = os.path.join(DATADIR, "instrument_to_telescope.json")
+        _DEFAULT_MAGSYS_PATH = os.path.join(DATADIR, "default_magsys_map.json")
         
         # then read these files in to constants for the package
         with open(_FILTER_DEFAULTS_PATH, "r") as f:
@@ -295,7 +296,16 @@ class UvoirFilter(Filter):
         with open(_TELESCOPE_MAP_PATH, "r") as f:
             self._TELESCOPE_MAP = json.load(f)
 
+        with open(_DEFAULT_MAGSYS_PATH, "r") as f:
+            self._DEFAULT_MAGSYS = json.load(f)
+            
         super().__init__(filter_name, telescope, instrument, out_wave_unit=out_wave_unit)
+
+        self.magsys = magsys
+        if self.magsys is None:
+            # default to AB? Reasonable assumption? Maybe we throw a warning here?
+            self.magsys = self._DEFAULT_MAGSYS.get(self.filter_name, "AB")
+            
         
     # Define some other utility functions
     def infer_instrument(self) -> str:
