@@ -2,6 +2,17 @@
 
 
 
+## v0.1.0 (2026-04-29)
+
+### Feature
+
+* feat: implement X-ray filter handling ([`32df523`](https://github.com/noahfranz13/infer_filter_info/commit/32df523191e288e5e57b923f9f3aef13faeaf51d))
+
+### Unknown
+
+* update installation instructions and add contributing guide ([`2914845`](https://github.com/noahfranz13/infer_filter_info/commit/2914845c55bea1be4e920905128436a1c621c8c9))
+
+
 ## v0.0.2 (2026-04-28)
 
 ### Fix
