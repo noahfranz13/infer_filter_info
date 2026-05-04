@@ -2,6 +2,15 @@
 
 
 
+## v0.1.2 (2026-05-04)
+
+### Fix
+
+* fix: handle numpy trapezoid naming change ([`ff2d5c1`](https://github.com/noahfranz13/infer_filter_info/commit/ff2d5c15b1adaad5f928aef5383db660b1b3cc0c))
+
+* fix: missing data dependency issue on pypi ([`811061a`](https://github.com/noahfranz13/infer_filter_info/commit/811061a1305818251817548c5ef4454253491923))
+
+
 ## v0.1.1 (2026-04-29)
 
 ### Fix
