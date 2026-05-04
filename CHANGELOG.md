@@ -2,6 +2,13 @@
 
 
 
+## v0.1.3 (2026-05-04)
+
+### Fix
+
+* fix: bug in pyproject.toml preventing json file uploads to pypi ([`806e8df`](https://github.com/noahfranz13/infer_filter_info/commit/806e8dfc6ab0ae35f7ac12d5ccba6bbf3ca63ad3))
+
+
 ## v0.1.2 (2026-05-04)
 
 ### Fix
