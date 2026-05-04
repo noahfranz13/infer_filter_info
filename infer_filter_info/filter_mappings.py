@@ -10,7 +10,9 @@ import json
 
 from .exceptions import MissingDefaultError
 
-DATADIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),"data")
+from importlib.resources import files
+
+DATADIR = files("infer_filter_info").joinpath("data")
 
 class Filter:
     def __init__(self, filter_name:str, telescope:str=None, instrument:str=None, out_wave_unit:u.Unit=u.AA):
@@ -78,8 +80,8 @@ class Filter:
         
 class RadioFilter(Filter):
     def __init__(self, filter_name:str, telescope:str=None, out_wave_unit:u.Unit=u.AA):
-        _RADIO_BANDS_PATH = os.path.join(DATADIR, "radio_bands.json")
-        _RADIO_BANDS_DEFAULTS = os.path.join(DATADIR, "radio_default_telescopes.json")
+        _RADIO_BANDS_PATH = DATADIR.joinpath("radio_bands.json")
+        _RADIO_BANDS_DEFAULTS = DATADIR.joinpath("radio_default_telescopes.json")
         with open(_RADIO_BANDS_PATH, "r") as f:
             self.RADIO_BANDS = json.load(f)
         with open(_RADIO_BANDS_DEFAULTS, "r") as f:
@@ -127,9 +129,9 @@ class XrayFilter(Filter):
             instrument:str=None,
             out_wave_unit:u.Unit=u.AA
     ):
-        _XRAY_FILTERS_PATH = os.path.join(DATADIR, "xray_bands.json")
-        _INSTRUMENT_MAP_PATH = os.path.join(DATADIR, "xray_telescope_to_instrument.json")
-        _TELESCOPE_MAP_PATH = os.path.join(DATADIR, "xray_instrument_to_telescope.json")
+        _XRAY_FILTERS_PATH = DATADIR.joinpath("xray_bands.json")
+        _INSTRUMENT_MAP_PATH = DATADIR.joinpath("xray_telescope_to_instrument.json")
+        _TELESCOPE_MAP_PATH = DATADIR.joinpath("xray_instrument_to_telescope.json")
         
         with open(_XRAY_FILTERS_PATH, "r") as f:
             self.XRAY_FILTERS = json.load(f)
@@ -281,10 +283,10 @@ class UvoirFilter(Filter):
 
     def __init__(self, filter_name:str, telescope:str=None, instrument:str=None, out_wave_unit:u.Unit=u.AA, magsys=None):
         # some private paths to json data
-        _FILTER_DEFAULTS_PATH = os.path.join(DATADIR, "filter_defaults.json")
-        _INSTRUMENT_MAP_PATH = os.path.join(DATADIR, "telescope_to_instrument.json")
-        _TELESCOPE_MAP_PATH = os.path.join(DATADIR, "instrument_to_telescope.json")
-        _DEFAULT_MAGSYS_PATH = os.path.join(DATADIR, "default_magsys_map.json")
+        _FILTER_DEFAULTS_PATH = DATADIR.joinpath("filter_defaults.json")
+        _INSTRUMENT_MAP_PATH = DATADIR.joinpath("telescope_to_instrument.json")
+        _TELESCOPE_MAP_PATH = DATADIR.joinpath("instrument_to_telescope.json")
+        _DEFAULT_MAGSYS_PATH = DATADIR.joinpath("default_magsys_map.json")
         
         # then read these files in to constants for the package
         with open(_FILTER_DEFAULTS_PATH, "r") as f:

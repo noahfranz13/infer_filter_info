@@ -3,7 +3,6 @@ The main user facing code of this package with the function to infer the filter 
 """
 
 from .filter_mappings import (
-    Filter,
     UvoirFilter,
     RadioFilter,
     XrayFilter

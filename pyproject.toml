@@ -53,3 +53,6 @@ Home = "https://github.com/noahfranz13/infer_filter_info"
 
 [tool.setuptools.dynamic]
 version = {attr = 'infer_filter_info._version.__version__'}
+
+[tool.setuptools.package-data]
+infer_filter_info = ["infer_filter_info/data/*.json"]
