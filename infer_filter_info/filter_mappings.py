@@ -9,10 +9,7 @@ import re
 import json
 
 from .exceptions import MissingDefaultError
-
-from importlib.resources import files
-
-DATADIR = files("infer_filter_info").joinpath("data")
+from .util import DATADIR, NP_TRAPZ_FN
 
 class Filter:
     def __init__(self, filter_name:str, telescope:str=None, instrument:str=None, out_wave_unit:u.Unit=u.AA):
@@ -351,7 +348,7 @@ class UvoirFilter(Filter):
 
     def get_central_wave(self):
         wav, T = self.get_sens()
-        wav_eff = np.trapezoid(wav*T, wav)/np.trapezoid(T, wav)
+        wav_eff = NP_TRAPZ_FN(wav*T, wav)/NP_TRAPZ_FN(T, wav)
         return wav_eff
 
     def get_sens(self):
